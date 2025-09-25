@@ -96,6 +96,7 @@ class TodoManager: ObservableObject {
                 tasks[index].completionDate = Date()
             }
         }
+        selectedTaskIds.removeAll()
     }
     
     func deleteSelectedTasks() {
@@ -108,6 +109,7 @@ class TodoManager: ObservableObject {
             tasks[index].isCompleted = true
             tasks[index].completionDate = Date()
         }
+        selectedTaskIds.removeAll()
     }
     
     // MARK: - 持久化
